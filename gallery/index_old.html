@@ -3,167 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simulathon 1.0</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
+  <title>Simulathon 2.0</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <style>
-    /* Cyber/NASA Punk Variables */
-    :root {
-      --space-black: #050608;
-      --panel-dark: #11141a;
-      --neon-cyan: #00f3ff;
-      --nasa-orange: #ff5a00;
-      --text-main: #c5c6c7;
-    }
-
     body {
-      background-color: var(--space-black);
-      /* Subtle schematic grid background */
-      background-image:
-        linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
-      background-size: 30px 30px;
-      color: var(--text-main);
-      font-family: 'Share Tech Mono', monospace;
+      background-color: #F5F5F5;
     }
-
-    /* Typography */
-    h1, h2, h3, h4, h5 {
-      font-family: 'Orbitron', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    /* Header Styling */
     .page-header {
-      background: rgba(5, 6, 8, 0.9);
-      border-bottom: 2px solid var(--neon-cyan);
-      box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
-      position: relative;
+      background-color: #343a40;
+      color: #ffffff;
     }
-
-    .page-header h1 {
-      color: var(--nasa-orange);
-      text-shadow: 0 0 10px rgba(255, 90, 0, 0.5);
-      font-weight: 700;
-    }
-
     .page-header .lead {
-      color: var(--neon-cyan);
-      opacity: 1;
+      opacity: 0.75;
     }
-
-    /* Cards (The "Applet Modules") */
     .card {
-      background-color: var(--panel-dark);
-      border: 1px solid #2a2d34;
-      border-radius: 0; /* Blocky, hardware look */
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
+      transition: transform 0.2s;
     }
-
-    /* Top accent line on cards */
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: var(--nasa-orange);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s ease;
-      z-index: 2;
-    }
-
-    .card:hover::before {
-      transform: scaleX(1);
-    }
-
     .card:hover {
       transform: translateY(-5px);
-      border-color: var(--neon-cyan);
-      box-shadow: 0 0 15px rgba(0, 243, 255, 0.3), inset 0 0 20px rgba(0, 243, 255, 0.05);
-    }
-
-    .card-title {
-      color: var(--neon-cyan);
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-    }
-
-    .card-text {
-      font-size: 0.9rem;
-      color: #8b92a5;
-    }
-
-    /* Image HUD effect */
-    .card-img-top {
-      border-radius: 0;
-      border-bottom: 1px solid #2a2d34;
-      /* Softened effect: just a slight dim and minor desaturation */
-      filter: saturate(70%) brightness(75%);
-      transition: filter 0.4s ease;
-    }
-
-    .card:hover .card-img-top {
-      /* Returns to full punchy color and brightness on hover */
-      filter: saturate(100%) brightness(100%);
-      border-bottom-color: var(--neon-cyan);
-    }
-
-    /* GitHub Button / Link */
-    .card-link {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 5px 15px;
-      color: var(--nasa-orange);
-      border: 1px solid var(--nasa-orange);
-      text-decoration: none;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 0.8rem;
-      transition: all 0.2s ease;
-      background: rgba(255, 90, 0, 0.05);
-    }
-
-    .card-link:hover {
-      background: var(--nasa-orange);
-      color: var(--space-black);
-      box-shadow: 0 0 10px var(--nasa-orange);
-    }
-
-    /* Ensure parent link wrapper doesn't ruin text colors */
-    .gallery-link {
-      text-decoration: none;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px dashed #2a2d34;
-      color: #5a6270 !important;
-      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+  <!-- Page Header -->
   <header class="page-header py-4 mb-4">
     <div class="container text-center">
       <h1 class="m-0">Simulathon 2.0</h1>
-      <p class="lead m-0">SYS.APPLET.GALLERY // ONLINE</p>
+      <p class="lead m-0">Applet Gallery</p>
     </div>
   </header>
 
+  <!-- Gallery -->
   <main class="container gallery">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <!-- Card 1 -->
       <div class="col">
-        <a href="https://mariona-olivella-tous.github.io/Simulathon/neighbours.html" class="gallery-link">
+        <a href="https://mariona-olivella-tous.github.io/Simulathon/neighbours.html" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/neighbours.png" class="card-img-top" alt="Neighbours">
             <div class="card-body">
@@ -175,8 +51,9 @@
         </a>
       </div>
 
+      <!-- Card 2 -->
       <div class="col">
-        <a href="https://arhervi.github.io/Simulathon-FDS/" class="gallery-link">
+        <a href="https://arhervi.github.io/Simulathon-FDS/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/fermi_gas.png" class="card-img-top" alt="Fermi Gas">
             <div class="card-body">
@@ -188,8 +65,9 @@
         </a>
       </div>
 
+      <!-- Card 3 -->
       <div class="col">
-        <a href="https://pauci17.github.io/Din-mica_estrelles/" class="gallery-link">
+        <a href="https://pauci17.github.io/Din-mica_estrelles/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/estrelles.png" class="card-img-top" alt="Dinamica estrelles">
             <div class="card-body">
@@ -201,8 +79,12 @@
         </a>
       </div>
 
+
+
+
+<!-- Card 4 -->
       <div class="col">
-        <a href="https://uriel-merino.github.io/SIMULATION-EXOPLANET/" class="gallery-link">
+        <a href="https://uriel-merino.github.io/SIMULATION-EXOPLANET/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/exoplanet.png" class="card-img-top" alt="Exoplanet Simulation">
             <div class="card-body">
@@ -214,8 +96,13 @@
         </a>
       </div>
 
+
+
+
+
+      <!-- Card 5 -->
       <div class="col">
-        <a href="https://ianpatonvazquez.github.io/simulathon_UB_2.0/" class="gallery-link">
+        <a href="https://ianpatonvazquez.github.io/simulathon_UB_2.0/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/labyrinth.png" class="card-img-top" alt="Quantum Labyrinth">
             <div class="card-body">
@@ -227,8 +114,11 @@
         </a>
       </div>
 
+
+
+      <!-- Card 6 -->
       <div class="col">
-        <a href="https://iagomume.github.io/MOSFET_sim/" class="gallery-link">
+        <a href="https://iagomume.github.io/MOSFET_sim/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/mosfet.png" class="card-img-top" alt="Simulador MOSFET">
             <div class="card-body">
@@ -240,8 +130,11 @@
         </a>
       </div>
 
+
+
+      <!-- Card 7 -->
       <div class="col">
-        <a href="https://paudediegoperez-droid.github.io/Prova_5/" class="gallery-link">
+        <a href="https://paudediegoperez-droid.github.io/Prova_5/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/laser.png" class="card-img-top" alt="Laser Puzzle">
             <div class="card-body">
@@ -253,8 +146,10 @@
         </a>
       </div>
 
+
+<!-- Card 8 -->
       <div class="col">
-        <a href="https://tridox25.github.io/Simulador-Inducci-Magn-tica/" class="gallery-link">
+        <a href="https://tridox25.github.io/Simulador-Inducci-Magn-tica/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/induccio.png" class="card-img-top" alt="Inducció">
             <div class="card-body">
@@ -266,8 +161,12 @@
         </a>
       </div>
 
+
+
+
+      <!-- Card 9 -->
       <div class="col">
-        <a href="https://uriel-merino.github.io/SIMULATON-VIRUS/" class="gallery-link">
+        <a href="https://uriel-merino.github.io/SIMULATON-VIRUS/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/virus.png" class="card-img-top" alt="Virus Simulation">
             <div class="card-body">
@@ -279,8 +178,11 @@
         </a>
       </div>
 
+
+
+      <!-- Card 10 -->
       <div class="col">
-        <a href="https://bernatgp04-dotcom.github.io/trump/" class="gallery-link">
+        <a href="https://bernatgp04-dotcom.github.io/trump/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/trump.png" class="card-img-top" alt="Simulador de Dinàmica Electoral">
             <div class="card-body">
@@ -292,8 +194,11 @@
         </a>
       </div>
 
+
+
+      <!-- Card 11 -->
       <div class="col">
-        <a href="https://dambosk.github.io/simulaci-Model-de-Ising/" class="gallery-link">
+        <a href="https://dambosk.github.io/simulaci-Model-de-Ising/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/ising.png" class="card-img-top" alt="2D Ising model critical point">
             <div class="card-body">
@@ -305,8 +210,13 @@
         </a>
       </div>
 
+
+
+
+
+      <!-- Card 12 -->
       <div class="col">
-        <a href="https://iuri-7.github.io/simulathon/" class="gallery-link">
+        <a href="https://iuri-7.github.io/simulathon/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/pendols.png" class="card-img-top" alt="Pèndols carregats ">
             <div class="card-body">
@@ -318,8 +228,13 @@
         </a>
       </div>
 
-       <div class="col">
-        <a href="https://arnaubs-ai.github.io/Rocket-lvl1/" class="gallery-link">
+
+
+
+
+       <!-- Card 13 -->
+      <div class="col">
+        <a href="https://arnaubs-ai.github.io/Rocket-lvl1/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/mars.png" class="card-img-top" alt="Landing on Mars">
             <div class="card-body">
@@ -331,8 +246,12 @@
         </a>
       </div>
 
+
+
+
+      <!-- Card 14 -->
       <div class="col">
-        <a href="https://blauabel.github.io/Simulathon_accelerador/" class="gallery-link">
+        <a href="https://blauabel.github.io/Simulathon_accelerador/" class="text-decoration-none text-reset">
           <div class="card h-100 shadow-sm">
             <img src="./images/collider.png" class="card-img-top" alt="Particle collider simulation">
             <div class="card-body">
@@ -344,13 +263,18 @@
         </a>
       </div>
 
-    </div>
-  </main>
 
-  <footer class="text-center py-4 mt-5">
+
+    </main>
+
+
+
+  <!-- Footer -->
+  <footer class="text-center py-3 text-muted mt-4">
     Made with passion and fun.
   </footer>
 
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
